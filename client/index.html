@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="assets/main.css" media="screen" title="no title">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+        <script type="text/javascript" src="client.js"></script>
+        <title>Google Maps Playground</title>
+    </head>
+    <body>
+        <header>
+            <h1>Murph's Google Maps Playground</h1>
+        </header>
+        <div class="autocomplete-box">
+            <h2>Autocomplete Search Box + Map</h2>
+            <p>Lat/Long defaults to Denver. However, if your browser supports geolocation the map bounds will snap to your current location</p>
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            <div id="map"></div>
+        </div>
+        <footer>
+            <small>&copy; 2016 | Murph Grainger</small>
+        </footer>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJE6LnzzzC6AudrqNcB07adFuE9hGDwKI&libraries=places&callback=initAutocomplete" async defer></script>
+    </body>
+</html>
