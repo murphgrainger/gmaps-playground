@@ -56,6 +56,8 @@ function initAutocomplete() {
     // Listen for the event fired when the user selects a prediction and retrieve more details for that place.
     searchBox.addListener('places_changed', function() {
         let places = searchBox.getPlaces();
+        console.log(places);
+        createContact(places);
 
         if (places.length === 0) {
             return;
@@ -100,4 +102,23 @@ function initAutocomplete() {
         map.fitBounds(bounds);
         map.setZoom(18);
     });
+}
+
+function createContact(places) {
+    let $placecontact = $('.place-contact');
+
+    $placecontact.append(`<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="https://maps.google.com/maps/contrib/105053229080828460712/photos ">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">${places[0].name}<i class="material-icons right">more_vert</i></span>
+      <p>${places[0].formatted_address}</p>
+      <p>${places[0].formatted_phone_number}</p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+      <p>Here is some more information about this product that is only revealed once clicked on.</p>
+    </div>
+  </div>`);
 }
