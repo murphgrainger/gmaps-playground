@@ -109,7 +109,7 @@ function createContact(places) {
 
     $placecontact.append(`<div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="https://maps.google.com/maps/contrib/105053229080828460712/photos ">
+      <img class="activator" src="${places[0].photos[0].getUrl({maxWidth:640})}">
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">${places[0].name}<i class="material-icons right">more_vert</i></span>
