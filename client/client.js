@@ -76,7 +76,7 @@ function initAutocomplete() {
             }
             let icon = {
                 url: place.icon,
-                size: new google.maps.Size(71, 71),
+                size: new google.maps.Size(50, 50),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
                 scaledSize: new google.maps.Size(25, 25)
@@ -87,7 +87,7 @@ function initAutocomplete() {
                 map: map,
                 icon: icon,
                 title: place.name,
-                position: place.geometry.location
+                position: place.geometry.location,
             }));
 
             if (place.geometry.viewport) {
@@ -98,5 +98,6 @@ function initAutocomplete() {
             }
         });
         map.fitBounds(bounds);
+        map.setZoom(18);
     });
 }
