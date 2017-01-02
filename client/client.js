@@ -27,6 +27,7 @@ function initAutocomplete() {
             infoWindow.setPosition(pos);
             infoWindow.setContent('Your Location');
             map.setCenter(pos);
+
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -108,7 +109,7 @@ function createContact(places) {
     let $placecontact = $('.place-contact');
 
     $placecontact.append(`<div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
+    <div class="card-image waves-effect waves-block waves-light image-holder">
       <img class="activator" src="${places[0].photos[0].getUrl({maxWidth:640})}">
     </div>
     <div class="card-content">

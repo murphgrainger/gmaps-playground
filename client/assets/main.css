@@ -94,3 +94,12 @@
     #target {
         width: 345px;
     }
+
+    .place-contact {
+      display: flex;
+      align-items: center;
+    }
+
+    .image-holder {
+      height: 20em;
+    }
